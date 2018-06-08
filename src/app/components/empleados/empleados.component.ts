@@ -1,5 +1,6 @@
+import { Empleado } from './../../models/empleado';
 import { Component, OnInit } from '@angular/core';
-import { Empleado } from './empleado';
+
 
 @Component({
   selector: 'app-empleados',
@@ -11,6 +12,8 @@ export class EmpleadosComponent implements OnInit {
   public empleado: Empleado;
   public trabajadores: Array<Empleado>;
   public trabajador_externo: Boolean;
+  public color: String;
+  public color_seleccionado: String;
   constructor() {
     this.empleado = new Empleado('karl', 45, 'cocinero', true);
     this.trabajadores = [
@@ -19,6 +22,8 @@ export class EmpleadosComponent implements OnInit {
        new Empleado('javier', 60, 'programador', true)
     ];
     this.trabajador_externo = true;
+    this.color = 'green';
+    this.color_seleccionado = '#ccc';
    }
 
   ngOnInit() {

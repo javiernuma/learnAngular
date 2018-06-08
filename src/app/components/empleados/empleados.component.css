@@ -1,3 +1,17 @@
 h2 {
     color: blue;
 }
+
+.bordeAzul {
+    border: 5px solid lightblue;
+}
+.fondoAzul{
+    background: lightblue;
+}
+
+.fondoVerde{
+    background: lightgreen;
+}
+.letraGrande{
+    font-size: 40px;
+}

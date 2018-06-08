@@ -1,6 +1,60 @@
 <h2>
   {{ title }}
 </h2>
+<hr>
+<h3>
+  selector de colores
+</h3>
+<input type="text" [(ngModel)]="color_seleccionado">
+<!-- [style.border] = "color_seleccionado == 'red' ? '5px solid black' : '2px solid grey'"
+[class.bordeAzul] = "color_seleccionado == 'blue'"
+[ngClass] ="{
+  fondoAzul: color_seleccionado == 'blue',
+  fondoVerde: color_seleccionado == 'green',
+  letraGrande: 1 == 1
+}"
+-->
+<pre
+[ngClass] = "['fondoAzul', 'letraGrande' ]"
+>
+  <strong>color elegido</strong>
+  {{color_seleccionado}}
+</pre>
+<div [ngStyle]="{
+  'background': color_seleccionado,
+  'width': '200px',
+  'height': '200px', 
+  'float': 'right',
+  'margin-right': '69%'}"></div>
+<div style="clear: both;"></div>
+<hr>
+<h3>
+    colores switch
+  </h3>
+  <ul [ngSwitch]="color">
+    <li *ngSwitchCase="'red'" [ngStyle]="{
+      'background':color, 
+      'color': 'white',
+      'padding': '20px'
+    }">
+    es de color rojo
+  </li>
+  <li *ngSwitchCase="'green'" [ngStyle]="{
+    'background':color, 
+    'color': 'white',
+    'padding': '20px'
+  }">
+  es de color rojo
+</li>
+<li *ngSwitchCase="'blue'" [ngStyle]="{
+  'background':color, 
+  'color': 'white',
+  'padding': '20px'
+}">
+es de color rojo
+</li>
+  </ul>
+<hr>
 <p>
   <strong>Empleado estrella</strong>
 </p>
@@ -25,6 +79,7 @@
         <li *ngIf = "empleado.contratado == false">No Esta Contratado</li>
       </ul>
 </div>
+<hr>
 <h3>
   LISTADO DE TRABAJADORES
 </h3>
@@ -40,4 +95,5 @@
       </ul>
     </li>
   </ul>
+<hr>
 
