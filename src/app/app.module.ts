@@ -6,18 +6,30 @@ import { AppComponent } from './app.component';
 import { FrutaComponent } from './components/fruta/fruta.component';
 import { EmpleadosComponent } from './components/empleados/empleados.component';
 import { routing, appRoutingProviders } from './routing/routing.module';
+import { HomeComponent } from './components/home/home.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { ConversorPipe } from './pipes/conversor.pipe';
+import { CochesComponent } from './components/coches/coches.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PlantillasComponent } from './components/plantillas/plantillas.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FrutaComponent,
-    EmpleadosComponent
+    EmpleadosComponent,
+    HomeComponent,
+    ContactoComponent,
+    ConversorPipe,
+    CochesComponent,
+    PlantillasComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    routing
+    routing,
+    HttpClientModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

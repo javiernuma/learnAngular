@@ -3,5 +3,19 @@
     Welcome to {{ title }}!
   </h1>
   <hr>
+  <nav>
+    <a [routerLink]="['/home']" [routerLinkActive]="['activado']">home</a>
+    -
+    <a [routerLink]="['/fruta']" [routerLinkActive]="['activado']">fruta</a>
+    -
+    <a [routerLink]="['/empleado']" [routerLinkActive]="['activado']">empleado</a>
+    -
+    <a [routerLink]="['/contacto']" [routerLinkActive]="['activado']">contacto</a>
+    -
+    <a [routerLink]="['/coches']" [routerLinkActive]="['activado']">coches</a>
+    -
+    <a [routerLink]="['/plantillas']" [routerLinkActive]="['activado']">plantillas</a>
+  </nav>
+  <hr>
   <router-outlet></router-outlet>
 
